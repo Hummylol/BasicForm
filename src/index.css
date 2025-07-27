@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+.floating-label {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .floating-label input {
+    padding: 12px 10px;
+  }
+  
+  .floating-label label {
+    position: absolute;
+    z-index: 100;
+    left: 12px;
+    top: 12px;
+    padding: 0 5px;
+    color: #aaa;
+    transition: 0.3s ease;
+    pointer-events: none;
+  }
+  
+  .floating-label input:focus + label,
+  .floating-label input:not(:placeholder-shown) + label {
+    top: -20px;
+    left: 2px;
+    font-size: 14px;
+    color: white;
+}
